@@ -1,31 +1,72 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view class="main" />
+    <footer class="footer">
+      <div class="footer-items row">
+        <div class="col-xs-4 col-xs-offset-4" style="text-align: center;">
+          Created by <a href="https://joway.io" target="_blank">@Joway</a> in
+          <a href="https://en.wikipedia.org/wiki/Elections_in_China" target="_blank">China</a>.
+          <div class="divider"></div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <style>
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+.main {
+  height: 100%;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: gainsboro;
+}
+
+.card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 8px 32px; */
+}
+.footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+}
+.footer-items {
+  margin: 32px;
+  line-height: 36px;
+  color: gray;
+}
+
+.submit-button {
+  background-color: lightskyblue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
   text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 </style>
